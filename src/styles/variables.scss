@@ -1,75 +1,78 @@
-/* src/styles/variables.scss */
+/* src/styles/variables.scss - AarogyaSakthi Theme Tokens */
 
-// 🎨 AarogyaSakthi Core Palette Tokens (SCSS Variables)
-$health-green: #059669;         // Primary Clinical Medical Green (Emerald 600)
-$health-green-dark: #064e3b;    // Deep Forest Green Accent (Emerald 900)
-$crimson-red: #dc2626;          // High-Visibility Crimson Red (Red 600)
-$crimson-red-hover: #b91c1c;    // Deep Crimson Hover (Red 700)
-$mint-mist: #ecfdf5;           // Light Clinical Mint Tint Canvas (Emerald 50)
+// 🎨 SCSS Palette Variables
+$health-green: #059669;       // Primary Clinical Emerald Green
+$health-green-hover: #047857; // Hover Clinical Green
+$health-green-dark: #064e3b;  // Deep Forest Green Accent
+$crimson-red: #dc2626;        // High-Visibility Crimson Red
+$crimson-red-hover: #b91c1c;  // Deep Crimson Hover
+$mint-mist: #ecfdf5;          // Light Clinical Mint Canvas
 
-$slate-dark: #0f172a;           // Deep Slate Primary Text / Dark Elements
-$slate-mid: #334155;            // Medium Slate Secondary Text
-$slate-muted: #64748b;          // Soft Slate Copy
-$slate-border: #e2e8f0;         // Boundary Line / Border
-$slate-light: #f8fafc;          // Clean Light Background Canvas
+$slate-dark: #0f172a;       // Deep Slate Primary Text
+$slate-mid: #334155;        // Medium Slate Secondary Text
+$slate-muted: #64748b;      // Soft Slate Copy
+$slate-border: #e2e8f0;     // Border / Line
+$slate-light: #f8fafc;      // Section Background Canvas
 $color-white: #ffffff;
 
-// 🖋 Typography Hierarchy
+// 🖋 Typography & Structural Variables
 $font-sans: 'Inter', system-ui, -apple-system, sans-serif;
 $font-serif: 'Cormorant Garamond', Georgia, serif;
-
-// 📐 Structural Standards
-$border-radius-bento: 12px;     // Standard for rectangular flat bento cards
+$border-radius-bento: 12px;
 $max-content-width: 1000px;
 $transition-smooth: 0.2s ease;
 
 :root {
-  /* ─── AAROGYASAKTHI PALETTE TOKENS ─── */
-  --health-green: #059669;
-  --health-green-hover: #047857;
-  --health-green-dark: #064e3b;
-  
-  --crimson-red: #dc2626;
-  --crimson-red-hover: #b91c1c;
-  --mint-mist: #ecfdf5;
+  /* ─── BRAND CORE PALETTE ─── */
+  --brand-accent: #dc2626;
+  --brand-accent-hover: #b91c1c;
+  --brand-primary: #059669;
+  --brand-primary-hover: #047857;
+  --brand-secondary: #064e3b;
+  --brand-surface-subtle: #ecfdf5;
 
-  --slate-dark: #0f172a;
-  --slate-mid: #334155;
-  --slate-muted: #64748b;
-  --slate-border: #e2e8f0;
-  --slate-light: #f8fafc;
-  --color-white: #ffffff;
-
-  /* ─── COMPONENT BRAND ALIASES (AAROGYASAKTHI RE-MAPPING) ─── */
-  --brand-primary: var(--health-green);
-  --brand-accent: var(--crimson-red);
-  --brand-violet: var(--health-green);
-  --brand-violet-hover: var(--health-green-hover);
-  --brand-plum: var(--slate-dark);
-  --brand-plum-mid: var(--health-green-dark);
-  --brand-royal: var(--health-green-dark);
-  --brand-lilac: var(--crimson-red);
-  
-  --color-lavender: var(--crimson-red);
-  --color-mist: var(--mint-mist);
-  --color-muted: var(--slate-muted);
-  --color-soft-bg: var(--slate-light);
-  --color-deep: var(--health-green-dark);
-
-  /* ─── SEMANTIC ALIASES ─── */
+  /* ─── BACKGROUND & CANVAS ─── */
+  --bg-border: #e2e8f0;
   --bg-canvas: #ffffff;
   --bg-main: #ffffff;
   --bg-section: #f8fafc;
-  --bg-border: #e2e8f0;
 
-  --ink-primary: #0f172a;       /* Deep slate standard text */
-  --ink-secondary: #334155;
+  /* ─── TYPOGRAPHY TOKENS ─── */
   --ink-muted: #64748b;
+  --ink-primary: #0f172a;
+  --ink-secondary: #334155;
   --text-heading: #0f172a;
   --text-main: #334155;
-  --text-muted: #64748b;        /* Soft slate body copy */
+  --text-muted: #64748b;
 
-  /* ─── LAYOUT & TYPOGRAPHY ─── */
+  /* ─── BUTTON COMPONENT TOKENS ─── */
+  --btn-bg-primary: var(--brand-primary);
+  --btn-bg-primary-hover: var(--brand-primary-hover);
+  --btn-bg-secondary: var(--bg-section);
+  --btn-bg-secondary-hover: var(--brand-surface-subtle);
+  --btn-border-secondary: var(--bg-border);
+  --btn-text-primary: #ffffff;
+  --btn-text-secondary: var(--ink-primary);
+
+  /* ─── CARD COMPONENT TOKENS ─── */
+  --card-bg: #ffffff;
+  --card-border: #e2e8f0;
+  --card-border-accent: var(--brand-primary);
+  --card-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+  --card-shadow-hover: 0 8px 24px rgba(5, 150, 105, 0.12);
+
+  /* ─── FORM COMPONENT TOKENS ─── */
+  --form-focus-ring: var(--brand-primary);
+  --form-input-bg: #ffffff;
+  --form-input-border: #e2e8f0;
+
+  /* ─── NAVIGATION & FOOTER ─── */
+  --footer-bg: #0f172a;         
+  --footer-text: #94a3b8;       
+  --header-bg: #ffffff;
+  --header-border: #e2e8f0;
+
+  /* ─── TYPOGRAPHY & LAYOUT STANDARDS ─── */
   --border-radius-bento: 12px;
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
   --font-serif: 'Cormorant Garamond', Georgia, serif;

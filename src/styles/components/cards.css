@@ -45,3 +45,40 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
+
+.card-body {
+  color: var(--slate-mid, #334155);
+  flex-grow: 1;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.lead-text {
+  color: var(--slate-dark, #0f172a);
+  font-size: 1.15rem;
+  font-weight: 500;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.body-text {
+  color: var(--slate-mid, #334155);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.link-arrow {
+  align-items: center;
+  color: var(--lab-blue, #0f172a);
+  display: inline-flex;
+  font-size: 0.9rem;
+  font-weight: 600;
+  gap: 6px;
+  margin-top: 16px;
+  text-decoration: none;
+}
+
+.link-arrow:hover {
+  color: var(--lab-blue-hover, #0f172a);
+  font-weight: strong;
+}

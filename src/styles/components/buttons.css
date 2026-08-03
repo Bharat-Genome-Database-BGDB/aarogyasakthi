@@ -4,26 +4,29 @@
 .btn-outline,
 .form-submit-btn {
   align-items: center;
+  background: var(--health-green, #059669);
+  border: 1px solid var(--health-green, #059669);
   border-radius: 8px;
+  color: #ffffff;
   cursor: pointer;
   display: inline-flex;
   font-family: var(--font-sans, sans-serif);
-  font-size: 14px;
+  font-size: 0.95rem;
   font-weight: 600;
   gap: 8px;
   justify-content: center;
-  padding: 12px 24px;
+  padding: 14px 24px;
   text-align: center;
   text-decoration: none;
   transition: all var(--transition-smooth, 0.2s ease);
+  width: 100%;
 }
 
-/* Solid Primary Button (Clinical Green) */
-.btn-solid,
-.form-submit-btn {
-  background: var(--health-green, #059669);
-  border: 1px solid var(--health-green, #059669);
-  color: #ffffff;
+
+.form-submit-btn:disabled {
+  background: var(--slate-muted, #64748b);
+  cursor: not-allowed;
+  transform: none;
 }
 
 .btn-solid:hover,

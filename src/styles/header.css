@@ -1,110 +1,99 @@
-/* src/styles/header.css */
+/* src/styles/header.css - Universal Header Component Styles */
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap');
-
-/* --- Global Behavior Override for Smooth Section Scrolling --- */
-html {
-  scroll-behavior: smooth;
-}
-
-/* --- 1. Global Shell --- */
+/* ─── 1. Global Shell ─── */
 .site-header {
-  width: 100%;
+  background-color: var(--header-bg);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  font-family: var(--font-sans);
   position: relative;
+  width: 100%;
   z-index: 1000;
-  font-family: 'Inter', sans-serif;
-  background-color: #ffffff;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); /* Lighter, clean boundary shadow */
 }
 
-/* --- 2. Top Ecosystem Bar (Preserved Clean Scientific Top Bar) --- */
+/* ─── 2. Top Bar Ecosystem ─── */
 .top-bar {
-  background-color: #0f172a; /* Deep Slate standard across all properties */
-  padding: 8px 24px;
-  color: #e2e8f0;
+  background-color: var(--brand-primary);
+  color: #ffffff;
   font-size: 13px;
   font-weight: 500;
+  padding: 8px 24px;
 }
 
 .top-bar-container {
-  max-width: 1200px;
-  margin: 0 auto;
+  align-items: center;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  margin: 0 auto;
+  max-width: 1200px;
 }
 
-.top-bar-ecosystem {
-  display: flex;
+.top-bar-ecosystem,
+.top-bar-socials {
   align-items: center;
+  display: flex;
   gap: 16px;
+}
+
+.nav-item-link,
+.social-link {
+  color: #ffffff;
+  font-size: 14px;
+  opacity: 0.85;
+  text-decoration: none;
+  transition: all var(--transition-smooth, 0.2s ease);
+}
+
+.nav-item-link:hover,
+.social-link:hover {
+  opacity: 1;
 }
 
 .nav-wrapper-item {
-  display: flex;
   align-items: center;
-  color: #e2e8f0;
-  transition: color 0.2s ease;
+  color: #ffffff;
+  display: flex;
   font-size: 12px;
-  font-weight: 600;
-}
-
-.nav-item-link {
-  color: #e2e8f0;
-  text-decoration: none;
-  transition: color 0.2s;
-}
-
-.nav-item-link:hover {
-  color: #059669; 
-}
-
-.separator {
-  color: #334155;
-  margin: 0 10px;
-  font-size: 16px;
-}
-
-.top-bar-socials {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-.social-link {
-  color: #e2e8f0;
-  transition: color 0.2s ease;
-  font-size: 14px;
-}
-
-.social-link:hover {
-  color: #059669;
+  font-weight: 700;
+  opacity: 0.85;
+  transition: opacity var(--transition-smooth, 0.2s ease);
 }
 
 .nav-wrapper-item:hover {
-  color: #059669;
+  opacity: 1;
 }
 
-/* --- 3. Main Navigation Shell --- */
+.separator {
+  color: var(--brand-accent);
+  font-size: 16px;
+  margin: 0 8px;
+  opacity: 0.6;
+}
+
+/* ─── 3. Branding & Main Navigation ─── */
 .main-nav-container {
+  background-color: var(--header-bg);
+  border-bottom: 1px solid var(--header-border);
   padding: 12px 24px;
-  background-color: #ffffff;
 }
 
 .nav-wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
+  align-items: center;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  margin: 0 auto;
+  max-width: 1200px;
 }
 
-/* Branding */
 .header__brand {
-  display: flex;
   align-items: center;
+  display: flex;
   gap: 12px;
   text-decoration: none;
+  transition: transform var(--transition-smooth, 0.2s ease);
+}
+
+.header__brand:hover {
+  transform: scale(1.02);
 }
 
 .brand-logo {
@@ -113,80 +102,101 @@ html {
 }
 
 .brand-title {
-  font-family: 'Cormorant Garamond', serif;
+  color: var(--text-heading);
+  font-family: var(--font-serif);
   font-size: 22px;
   font-weight: 700;
-  color: #0f172a; /* Deep slate title text */
   margin: 0;
 }
 
 .brand-tagline {
+  color: var(--text-muted);
   font-size: 11px;
-  color: #64748b;
-  margin: 0;
   font-weight: 500;
   letter-spacing: 0.5px;
+  margin: 0;
 }
 
-/* Navigation Links - Clinical Green Theme Elements */
 .nav-list {
-  display: flex;
   align-items: center;
+  display: flex;
   gap: 24px;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
+.nav-item {
+  position: relative;
+}
+
 .nav-link-item {
-  text-decoration: none;
+  align-items: center;
+  color: var(--text-heading);
+  display: flex;
   font-size: 15px;
   font-weight: 500;
-  color: #334155;
-  padding: 8px 4px;
-  display: flex;
-  align-items: center;
   gap: 6px;
-  transition: color 0.2s ease;
+  padding: 8px 4px;
+  text-decoration: none;
+  transition: color var(--transition-smooth, 0.2s ease);
 }
 
 .nav-link-item:hover,
 .nav-link-item.active {
-  color: #059669; /* Dynamic Medical/Clinical Green active hover state */
+  color: var(--brand-accent);
 }
 
-/* CTA Sign In Button - Premium Crimson Life-Science Red Accent */
-.nav-signin-btn {
-  background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%); /* Life-science crimson gradient */
-  color: #ffffff;
-  padding: 8px 20px;
+/* ─── 4. Dropdowns ─── */
+.dropdown-menu {
+  background-color: var(--header-bg);
+  border: 1px solid var(--header-border);
   border-radius: 6px;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 600;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-
-.nav-signin-btn:hover {
-  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.25); /* Crimson glow on element hover */
-  transform: translateY(-1px);
-}
-
-/* Mobile Toggle */
-.mobile-nav-toggle {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   display: none;
-  border: none;
+  left: 0;
+  list-style: none;
+  margin-top: 8px;
+  min-width: 220px;
+  padding: 8px 0;
+  position: absolute;
+  top: 100%;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+.dropdown-link-item {
+  color: var(--text-main);
+  display: block;
+  font-size: 14px;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: all var(--transition-smooth, 0.2s ease);
+}
+
+.dropdown-link-item:hover {
+  background-color: var(--brand-surface-subtle);
+  color: var(--brand-accent);
+}
+
+/* ─── 5. Mobile Controls ─── */
+.mobile-nav-toggle {
   background: transparent;
+  border: none;
   cursor: pointer;
+  display: none;
 }
 
 .hamburger-bar {
-  width: 24px;
+  background-color: var(--text-heading);
   height: 2px;
-  background: #0f172a;
   margin: 4px 0;
+  width: 24px;
 }
 
+/* ─── 6. Responsive Breakpoints ─── */
 @media (max-width: 992px) {
   .mobile-nav-toggle {
     display: flex;
@@ -194,14 +204,14 @@ html {
   }
 
   .nav-menu {
+    background-color: var(--header-bg);
+    border-bottom: 1px solid var(--header-border);
     display: none;
+    left: 0;
+    padding: 20px;
     position: absolute;
     top: 100%;
-    left: 0;
     width: 100%;
-    background: #ffffff;
-    padding: 20px;
-    border-bottom: 1px solid #e2e8f0;
   }
 
   .nav-menu.open {
@@ -209,8 +219,7 @@ html {
   }
 
   .nav-list {
-    flex-direction: column;
     align-items: flex-start;
-    gap: 16px;
+    flex-direction: column;
   }
 }

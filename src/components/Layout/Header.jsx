@@ -17,9 +17,7 @@ const Header = () => {
 
   // --- AarogyaSakthi Smooth-Scroll Navigation Setup ---
   const navLinks = [
-    { label: "Home", to: "/" },
     { label: "About Initiatives", to: "/about" },       
-    { label: "Translational Projects", to: "/#projects" }, 
     { label: "Contact Us", to: "/contact" }, 
   ];
 
