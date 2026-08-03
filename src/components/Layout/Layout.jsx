@@ -1,12 +1,13 @@
-//src/components/Layout/Layout.jsx
 'use client';
 
 import { useEffect } from "react";
+import Header from "./Header";
+import Footer from "./Footer";
 
 /**
  * @component Layout
  * @description Master framework template wrapper handling dynamic document titles, 
- * meta descriptions, and cache-busting favicon linking. Purely logical now to prevent duplication.
+ * meta descriptions, cache-busting favicon linking, and rendering the global Header and Footer shell.
  */
 export default function Layout({ title, description, children }) {
 
@@ -41,10 +42,11 @@ export default function Layout({ title, description, children }) {
     faviconLink.href = `/favicon.ico?v=${Date.now()}`;
   }, [title, description]);
 
-  // Return ONLY children. RootLayout handles the visual header/footer wrapping globally.
   return (
     <>
+      <Header />
       {children}
+      <Footer />
     </>
   );
 }

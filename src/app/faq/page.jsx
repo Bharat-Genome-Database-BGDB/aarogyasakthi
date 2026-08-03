@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import Layout from "@layout/Layout";
+import "@styles/main.css";
 
 const faqs = [
  {
@@ -37,6 +39,10 @@ export default function FAQPage() {
   };
 
   return (
+    <Layout 
+      title="Frequently Asked Questions | AarogyaSakthi" 
+      description="Common inquiries regarding computational access, research partnerships, open-access databases, and academic fellowships."
+    >
     <main className="container">
       
       <header className="hero-identity-group">
@@ -61,6 +67,7 @@ export default function FAQPage() {
       </div>
 
     </main>
+    </Layout>
   );
 
 }

@@ -1,11 +1,16 @@
 'use client';
 
+import Layout from "@layout/Layout";
 import "@styles/main.css";
 
 export default function PrivacyPage() {
   return (
-    <main className="container">
-      
+    <Layout 
+      title="Data Privacy & Computational Terms | AarogyaSakthi" 
+      description="Information about our data privacy practices and computational terms of use."
+    >
+      <main className="container">
+        
       <header className="hero-identity-group">
         <h1 className="hero-main-title">Data Privacy & Computational Terms</h1>
         <p className="hero-sub-tagline">
@@ -47,5 +52,6 @@ export default function PrivacyPage() {
           </section>
       </article>
     </main>
+    </Layout>
   );
 }
