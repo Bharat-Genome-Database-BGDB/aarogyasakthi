@@ -1,0 +1,86 @@
+/* src/styles/footer.css */
+
+/* --- 1. Shell --- */
+.site-footer {
+  background-color: var(--slate-dark, #0f172a); 
+  border-top: 1px solid var(--slate-border, #e2e8f0);
+  color: var(--slate-muted, #64748b);
+  font-family: var(--font-sans, 'Inter', sans-serif);
+  padding: 60px 24px 40px;
+  width: 100%;
+}
+
+.footer-inner {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: 2fr repeat(2, 1fr);
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* Adjust grid if RBAC/member links are rendered */
+.footer-inner:has(.member-gate-links) {
+  grid-template-columns: 2fr repeat(3, 1fr);
+}
+
+/* --- 2. Branding Column --- */
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-brand-title {
+  color: var(--color-white, #ffffff);
+  font-family: var(--font-serif, 'Cormorant Garamond', serif);
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.footer-address {
+  color: var(--slate-muted, #64748b);
+  font-size: 14px;
+  font-style: normal;
+  line-height: 1.6;
+}
+
+.footer-copyright {
+  color: var(--slate-muted, #64748b);
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+/* --- 3. Link Blocks --- */
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-links h4 {
+  color: var(--tech-cyan, #38bdf8);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  margin: 0 0 4px 0;
+  text-transform: uppercase;
+}
+
+.footer-links a {
+  color: var(--slate-muted, #64748b);
+  display: block;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--slate-light, #f8fafc);
+}
+
+/* --- 4. Responsive --- */
+@media (max-width: 768px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+  }
+}

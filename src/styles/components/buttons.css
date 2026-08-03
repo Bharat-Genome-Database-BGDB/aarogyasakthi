@@ -1,0 +1,57 @@
+/* src/styles/components/buttons.css */
+
+.btn-solid,
+.btn-outline,
+.form-submit-btn {
+  align-items: center;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: var(--font-sans, sans-serif);
+  font-size: 14px;
+  font-weight: 600;
+  gap: 8px;
+  justify-content: center;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all var(--transition-smooth, 0.2s ease);
+}
+
+/* Solid Primary Button */
+.btn-solid,
+.form-submit-btn {
+  background: var(--lab-blue, #0284c7);
+  border: 1px solid var(--lab-blue, #0284c7);
+  color: #ffffff;
+}
+
+.btn-solid:hover,
+.form-submit-btn:hover {
+  background: var(--lab-blue-hover, #0369a1);
+  border-color: var(--lab-blue-hover, #0369a1);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.btn-solid:disabled,
+.form-submit-btn:disabled {
+  background: var(--slate-muted, #64748b);
+  border-color: var(--slate-muted, #64748b);
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Outline Secondary Button */
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--slate-border, #e2e8f0);
+  color: var(--slate-dark, #0f172a);
+}
+
+.btn-outline:hover {
+  background: var(--cyan-mist, #e0f2fe);
+  border-color: var(--tech-cyan, #38bdf8);
+  color: var(--lab-blue, #0284c7);
+  transform: translateY(-2px);
+}

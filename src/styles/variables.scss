@@ -1,0 +1,78 @@
+/* src/styles/variables.scss */
+
+// 🎨 AarogyaSakthi Core Palette Tokens (SCSS Variables)
+$health-green: #059669;         // Primary Clinical Medical Green (Emerald 600)
+$health-green-dark: #064e3b;    // Deep Forest Green Accent (Emerald 900)
+$crimson-red: #dc2626;          // High-Visibility Crimson Red (Red 600)
+$crimson-red-hover: #b91c1c;    // Deep Crimson Hover (Red 700)
+$mint-mist: #ecfdf5;           // Light Clinical Mint Tint Canvas (Emerald 50)
+
+$slate-dark: #0f172a;           // Deep Slate Primary Text / Dark Elements
+$slate-mid: #334155;            // Medium Slate Secondary Text
+$slate-muted: #64748b;          // Soft Slate Copy
+$slate-border: #e2e8f0;         // Boundary Line / Border
+$slate-light: #f8fafc;          // Clean Light Background Canvas
+$color-white: #ffffff;
+
+// 🖋 Typography Hierarchy
+$font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+$font-serif: 'Cormorant Garamond', Georgia, serif;
+
+// 📐 Structural Standards
+$border-radius-bento: 12px;     // Standard for rectangular flat bento cards
+$max-content-width: 1000px;
+$transition-smooth: 0.2s ease;
+
+:root {
+  /* ─── AAROGYASAKTHI PALETTE TOKENS ─── */
+  --health-green: #059669;
+  --health-green-hover: #047857;
+  --health-green-dark: #064e3b;
+  
+  --crimson-red: #dc2626;
+  --crimson-red-hover: #b91c1c;
+  --mint-mist: #ecfdf5;
+
+  --slate-dark: #0f172a;
+  --slate-mid: #334155;
+  --slate-muted: #64748b;
+  --slate-border: #e2e8f0;
+  --slate-light: #f8fafc;
+  --color-white: #ffffff;
+
+  /* ─── COMPONENT BRAND ALIASES (AAROGYASAKTHI RE-MAPPING) ─── */
+  --brand-primary: var(--health-green);
+  --brand-accent: var(--crimson-red);
+  --brand-violet: var(--health-green);
+  --brand-violet-hover: var(--health-green-hover);
+  --brand-plum: var(--slate-dark);
+  --brand-plum-mid: var(--health-green-dark);
+  --brand-royal: var(--health-green-dark);
+  --brand-lilac: var(--crimson-red);
+  
+  --color-lavender: var(--crimson-red);
+  --color-mist: var(--mint-mist);
+  --color-muted: var(--slate-muted);
+  --color-soft-bg: var(--slate-light);
+  --color-deep: var(--health-green-dark);
+
+  /* ─── SEMANTIC ALIASES ─── */
+  --bg-canvas: #ffffff;
+  --bg-main: #ffffff;
+  --bg-section: #f8fafc;
+  --bg-border: #e2e8f0;
+
+  --ink-primary: #0f172a;       /* Deep slate standard text */
+  --ink-secondary: #334155;
+  --ink-muted: #64748b;
+  --text-heading: #0f172a;
+  --text-main: #334155;
+  --text-muted: #64748b;        /* Soft slate body copy */
+
+  /* ─── LAYOUT & TYPOGRAPHY ─── */
+  --border-radius-bento: 12px;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --max-content-width: 1000px;
+  --transition-smooth: 0.2s ease;
+}

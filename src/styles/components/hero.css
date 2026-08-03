@@ -1,0 +1,43 @@
+/* src/styles/components/hero.css */
+
+.hero-section,
+.page-hero {
+  background: var(--bg-canvas, #ffffff);
+  border-bottom: 1px solid var(--slate-border, #e2e8f0);
+  padding: 70px 0 50px;
+  text-align: center;
+  width: 100%;
+}
+
+.hero-title {
+  color: var(--slate-dark, #0f172a);
+  font-family: var(--font-serif, 'Cormorant Garamond', Georgia, serif);
+  font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0 auto 20px;
+  max-width: 900px;
+}
+
+.hero-subtitle {
+  color: var(--slate-muted, #64748b);
+  font-family: var(--font-sans, sans-serif);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.6;
+  margin: 0 auto 32px;
+  max-width: 750px;
+}
+
+.hero-cta-group {
+  align-items: center;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+@media (max-width: 576px) {
+  .hero-cta-group {
+    flex-direction: column;
+  }
+}

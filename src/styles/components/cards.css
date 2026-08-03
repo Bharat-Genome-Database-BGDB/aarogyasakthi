@@ -1,0 +1,84 @@
+/* src/styles/components/cards.css */
+
+/* --- 1. Core Unified Card Component --- */
+.card {
+  background: var(--color-white, #ffffff);
+  border: 1px solid var(--slate-border, #e2e8f0);
+  border-left: 4px solid var(--lab-blue, #0284c7);
+  border-radius: var(--border-radius-bento, 12px);
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.02);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 32px;
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover {
+  border-color: var(--lab-blue-hover, #0369a1);
+  border-left: 4px solid var(--lab-blue, #0284c7);
+  box-shadow: 0 8px 24px rgba(2, 132, 199, 0.08);
+  transform: translateY(-4px);
+}
+
+/* --- 2. Card Inner Typography & Content Helpers --- */
+.card-header-flex {
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.card-title {
+  color: var(--slate-dark, #0f172a);
+  font-family: var(--font-serif, 'Cormorant Garamond', serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.card-subtitle {
+  color: var(--lab-blue, #0284c7);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.card-body {
+  color: var(--slate-mid, #334155);
+  flex-grow: 1;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.lead-text {
+  color: var(--slate-dark, #0f172a);
+  font-size: 1.15rem;
+  font-weight: 500;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.body-text {
+  color: var(--slate-mid, #334155);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.link-arrow {
+  align-items: center;
+  color: var(--lab-blue, #0284c7);
+  display: inline-flex;
+  font-size: 0.9rem;
+  font-weight: 600;
+  gap: 6px;
+  margin-top: 16px;
+  text-decoration: none;
+}
+
+.link-arrow:hover {
+  color: var(--lab-blue-hover, #0369a1);
+}
