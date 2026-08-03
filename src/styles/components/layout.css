@@ -1,127 +1,140 @@
-/* src/styles/components/layout.css */
+/* src/styles/components/layout.css - Universal Page Layout & Grid Utilities */
 
-/* --- 1. Global Shell & Containers --- */
-.page-wrapper {
-  min-height: 80vh;
-  width: 100%;
-}
-
+/* ─── 1. Shell Containers & Main Wrappers ─── */
 .container {
   margin: 0 auto;
   max-width: var(--max-content-width, 1000px);
+  padding: 0 24px 100px;
+}
+
+.content-editorial {
+  color: var(--text-main);
+  line-height: 1.8;
+  margin: 0 auto;
+  max-width: 800px;
   padding: 0 24px;
-  width: 100%;
 }
 
-.section-container {
-  padding: 60px 0;
-  width: 100%;
-}
-
-.bg-light {
-  background-color: var(--slate-light, #f8fafc);
-}
-
-.section-header {
-  margin-bottom: 40px;
-}
-
-.section-header.text-center {
+.hero-section {
+  padding: 80px 0;
   text-align: center;
 }
 
-.section-title {
-  color: var(--slate-dark, #0f172a);
-  font-family: var(--font-serif, serif);
-  font-size: clamp(1.8rem, 3vw, 2.4rem);
-  font-weight: 700;
-  margin-bottom: 8px;
+.mission-summary {
+  margin: 60px auto;
+  max-width: 800px;
+  padding: 0 24px;
+  text-align: center;
 }
 
-.section-subtitle {
-  color: var(--slate-muted, #64748b);
-  font-size: 1.1rem;
+.section-highlight {
+  background-color: var(--bg-section);
+  border-radius: 16px;
+  margin-top: 48px;
+  padding: 48px;
+  text-align: center;
 }
 
-/* --- 2. Grid Engine --- */
-.grid {
+.section-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.story-callout {
+  background-color: var(--brand-surface-subtle);
+  border-left: 4px solid var(--brand-accent);
+  border-radius: var(--border-radius-bento, 12px);
+  padding: 32px;
+}
+
+.story-narrative {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.verticals-wrapper {
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 0 24px;
+}
+
+/* ─── 2. Base Grid Engine ─── */
+.grid,
+.grid-2,
+.grid-3,
+.section-grid {
   display: grid;
-  width: 100%;
+  gap: 32px;
+  grid-template-columns: 1fr;
 }
 
-.grid-cols-1 { grid-template-columns: repeat(1, 1fr); }
-.grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
-.grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
-
-.gap-sm { gap: 16px; }
-.gap-md { gap: 24px; }
-.gap-lg { gap: 32px; }
-
-.grid-span-2 { grid-column: span 2; }
-
-/* Responsive Grid Breakpoints */
-@media (max-width: 992px) {
-  .grid-cols-3 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .grid-span-2 {
-    grid-column: span 1;
-  }
+.grid > * {
+  min-width: 0;
 }
 
-@media (max-width: 768px) {
-  .grid-cols-2,
-  .grid-cols-3 {
-    grid-template-columns: 1fr;
-  }
-  .section-container {
-    padding: 40px 0;
-  }
+.grid-cols-1 {
+  grid-template-columns: 1fr;
 }
 
-/* --- 3. Badges & Micro-Elements --- */
-.badge-tag {
-  background: var(--cyan-mist, #e0f2fe);
-  border: 1px solid rgba(5, 150, 105, 0.2);
-  border-radius: 20px;
-  color: var(--health-green-dark, #064e3b);
-  display: inline-block;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  margin-bottom: 16px;
-  padding: 4px 14px;
+.partners-grid {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin-top: 40px;
+}
+
+/* ─── 3. Reusable Info Items ─── */
+.info-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr;
+  margin-top: 24px;
+}
+
+.info-item {
+  background-color: var(--bg-section);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.info-item strong {
+  color: var(--brand-primary);
+  font-size: 12px;
+  margin-bottom: 4px;
   text-transform: uppercase;
 }
 
-.badge-accent {
-  background: var(--cyan-mist, #e0f2fe);
-  border-radius: 6px;
-  color: #ffffff;
-  font-size: 0.75rem;
-  font-weight: 600;
-  padding: 4px 10px;
+/* ─── 4. Gap Utilities ─── */
+.gap-md {
+  gap: 16px;
 }
 
-.badge-light {
-  background: var(--cyan-mist, #e0f2fe);
-  border-radius: 6px;
-  color: var(--lab-blue-dark, #0c4a6e);
-  display: inline-block;
-  font-size: 0.75rem;
-  font-weight: 600;
-  margin-bottom: 12px;
-  padding: 4px 10px;
+.gap-lg {
+  gap: 32px;
 }
 
-.text-cyan {
-  color: var(--cyan-mist, #e0f2fe);
+/* ─── 5. Responsive Breakpoints ─── */
+@media (min-width: 768px) {
+  .grid-2,
+  .grid-cols-2,
+  .info-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-3,
+  .grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
-.text-center {
-  text-align: center;
-}
-
-.full-width {
-  width: 100%;
+@media (min-width: 1024px) {
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

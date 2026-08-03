@@ -1,41 +1,59 @@
-/* src/styles/components/hero.css */
+/* src/styles/components/hero.css - Universal Hero Component Styles */
 
-.hero-section,
-.page-hero {
-  background: linear-gradient(180deg, var(--mint-mist, #ecfdf5) 0%, #ffffff 100%);
-  border-bottom: 1px solid var(--slate-border, #e2e8f0);
-  padding: 70px 0 50px;
+/* ─── 1. Hero Outer Shell ─── */
+.hero {
+  background-color: var(--bg-main, #ffffff);
+  padding: 80px 24px;
   text-align: center;
   width: 100%;
 }
 
+.hero-content {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+/* ─── 2. Hero Typography ─── */
 .hero-title {
-  color: var(--slate-dark, #0f172a);
-  font-family: var(--font-serif, 'Cormorant Garamond', Georgia, serif);
-  font-size: clamp(2.2rem, 4.5vw, 3.2rem);
-  font-weight: 700;
-  line-height: 1.25;
-  margin: 0 auto 20px;
-  max-width: 900px;
+  color: var(--text-heading);
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  line-height: 1.1;
+  margin-bottom: 16px;
 }
 
-.hero-title span {
-  color: var(--health-green, #059669);
-}
-
-.hero-subtitle {
-  color: var(--slate-muted, #64748b);
-  font-family: var(--font-sans, sans-serif);
-  font-size: clamp(1rem, 2vw, 1.2rem);
+.hero-tagline {
+  color: var(--text-main);
+  font-size: 1.1rem;
   line-height: 1.6;
-  margin: 0 auto 32px;
-  max-width: 750px;
+  margin: 0 auto;
+  max-width: 600px;
 }
 
-.hero-cta-group {
+/* ─── 3. Hero Actions & CTA Wrappers ─── */
+.hero-actions {
   align-items: center;
   display: flex;
+  flex-wrap: wrap;
   gap: 16px;
   justify-content: center;
-  margin-top: 24px;
+  margin-top: 32px;
+}
+
+/* ─── 4. Responsive Adjustments ─── */
+@media (max-width: 640px) {
+  .hero {
+    padding: 48px 16px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-actions .btn-solid,
+  .hero-actions .btn-outline,
+  .hero-actions .btn-accent {
+    width: 100%;
+  }
 }

@@ -23,7 +23,7 @@ $max-content-width: 1000px;
 $transition-smooth: 0.2s ease;
 
 :root {
-  /* ─── BRAND CORE PALETTE ─── */
+  /* ─── BRAND CORE LEGEND (For Reference) ─── */
   --brand-accent: #dc2626;
   --brand-accent-hover: #b91c1c;
   --brand-primary: #059669;
@@ -46,29 +46,29 @@ $transition-smooth: 0.2s ease;
   --text-muted: #64748b;
 
   /* ─── BUTTON COMPONENT TOKENS ─── */
-  --btn-bg-primary: var(--brand-primary);
-  --btn-bg-primary-hover: var(--brand-primary-hover);
-  --btn-bg-secondary: var(--bg-section);
-  --btn-bg-secondary-hover: var(--brand-surface-subtle);
-  --btn-border-secondary: var(--bg-border);
+  --btn-bg-primary: #059669;
+  --btn-bg-primary-hover: #047857;
+  --btn-bg-secondary: #f8fafc;
+  --btn-bg-secondary-hover: #ecfdf5;
+  --btn-border-secondary: #e2e8f0;
   --btn-text-primary: #ffffff;
-  --btn-text-secondary: var(--ink-primary);
+  --btn-text-secondary: #0f172a;
 
   /* ─── CARD COMPONENT TOKENS ─── */
   --card-bg: #ffffff;
   --card-border: #e2e8f0;
-  --card-border-accent: var(--brand-primary);
+  --card-border-accent: #059669;
   --card-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
   --card-shadow-hover: 0 8px 24px rgba(5, 150, 105, 0.12);
 
   /* ─── FORM COMPONENT TOKENS ─── */
-  --form-focus-ring: var(--brand-primary);
+  --form-focus-ring: #059669;
   --form-input-bg: #ffffff;
   --form-input-border: #e2e8f0;
 
   /* ─── NAVIGATION & FOOTER ─── */
-  --footer-bg: #0f172a;         
-  --footer-text: #94a3b8;       
+  --footer-bg: #0f172a;
+  --footer-text: #94a3b8;
   --header-bg: #ffffff;
   --header-border: #e2e8f0;
 
