@@ -2,231 +2,215 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap');
 
-/* --- 1. Global Shell --- */
-.site-header {
-  background-color: var(--bg-canvas, #ffffff);
-  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.05);
-  font-family: var(--font-sans, 'Inter', sans-serif);
-  position: relative;
-  width: 100%;
-  z-index: 1000;
+/* --- Global Behavior Override for Smooth Section Scrolling --- */
+html {
+  scroll-behavior: smooth;
 }
 
-/* --- 2. Branding & Main Navigation --- */
+/* --- 1. Global Shell --- */
+.site-header {
+  width: 100%;
+  position: relative;
+  z-index: 1000;
+  font-family: 'Inter', sans-serif;
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); /* Lighter, clean boundary shadow */
+}
+
+/* --- 2. Top Ecosystem Bar (Preserved Clean Scientific Top Bar) --- */
+.top-bar {
+  background-color: #0f172a; /* Deep Slate standard across all properties */
+  padding: 8px 24px;
+  color: #e2e8f0;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.top-bar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-bar-ecosystem {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.nav-wrapper-item {
+  display: flex;
+  align-items: center;
+  color: #e2e8f0;
+  transition: color 0.2s ease;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.nav-item-link {
+  color: #e2e8f0;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav-item-link:hover {
+  color: #059669; 
+}
+
+.separator {
+  color: #334155;
+  margin: 0 10px;
+  font-size: 16px;
+}
+
+.top-bar-socials {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.social-link {
+  color: #e2e8f0;
+  transition: color 0.2s ease;
+  font-size: 14px;
+}
+
+.social-link:hover {
+  color: #059669;
+}
+
+.nav-wrapper-item:hover {
+  color: #059669;
+}
+
+/* --- 3. Main Navigation Shell --- */
+.main-nav-container {
+  padding: 12px 24px;
+  background-color: #ffffff;
+}
+
+.nav-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Branding */
+.header__brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
 .brand-logo {
   height: 48px;
   width: auto;
 }
 
-.brand-tagline {
-  color: var(--slate-muted, #64748b);
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  margin: 0;
-}
-
 .brand-title {
-  color: var(--slate-dark, #0f172a);
-  font-family: var(--font-serif, 'Cormorant Garamond', serif);
+  font-family: 'Cormorant Garamond', serif;
   font-size: 22px;
   font-weight: 700;
+  color: #0f172a; /* Deep slate title text */
   margin: 0;
 }
 
-.header__brand {
-  align-items: center;
-  display: flex;
-  gap: 12px;
-  text-decoration: none;
-  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
-}
-
-.header__brand:hover {
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
-  transform: scale(1.2);
-  z-index: 10;
-}
-
-.main-nav-container {
-  background-color: var(--bg-canvas, #ffffff);
-  padding: 12px 24px;
-}
-
-.nav-wrapper {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  margin: 0 auto;
-  max-width: 1200px;
-}
-
-/* --- 3. Navigation Links & Dropdowns --- */
-.dropdown-link-item {
-  color: var(--slate-mid, #334155);
-  display: block;
-  font-size: 14px;
-  padding: 10px 20px;
-  text-decoration: none;
-}
-
-.dropdown-link-item:hover {
-  background: var(--cyan-mist, #e0f2fe);
-  color: var(--lab-blue, #0284c7);
-}
-
-.dropdown-menu {
-  background: var(--bg-canvas, #ffffff);
-  border-radius: 6px;
-  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.1);
-  display: none;
-  left: 0;
-  list-style: none;
-  margin-top: 8px;
-  min-width: 220px;
-  padding: 8px 0;
-  position: absolute;
-  top: 100%;
-}
-
-.dropdown-menu.show {
-  display: block;
-}
-
-.nav-item {
-  position: relative;
-}
-
-.nav-link-item {
-  align-items: center;
-  color: var(--slate-dark, #0f172a);
-  display: flex;
-  font-size: 15px;
+.brand-tagline {
+  font-size: 11px;
+  color: #64748b;
+  margin: 0;
   font-weight: 500;
-  gap: 6px;
-  padding: 8px 4px;
-  text-decoration: none;
+  letter-spacing: 0.5px;
 }
 
-.nav-link-item:hover,
-.nav-link-item.active {
-  color: var(--lab-blue, #0284c7);
-}
-
+/* Navigation Links - Clinical Green Theme Elements */
 .nav-list {
-  align-items: center;
   display: flex;
+  align-items: center;
   gap: 24px;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-/* --- 4. Mobile Controls --- */
-.hamburger-bar {
-  background: var(--slate-dark, #0f172a);
-  height: 2px;
-  margin: 4px 0;
-  width: 24px;
-}
-
-.mobile-nav-toggle {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  display: none;
-}
-
-/* --- 5. Top Bar Ecosystem --- */
-.nav-item-link {
-  color: var(--slate-light, #f8fafc);
+.nav-link-item {
   text-decoration: none;
-  transition: opacity 0.2s;
-}
-
-.nav-item-link:hover {
-  opacity: 0.8;
-}
-
-.nav-wrapper-item {
-  align-items: center;
-  color: var(--slate-light, #f8fafc);
-  display: flex;
-  font-size: 12px;
-  font-style: bold;
-  transition: color 0.2s ease;
-}
-
-.nav-wrapper-item:hover {
-  color: var(--tech-cyan, #38bdf8);
-  font-size: 16px;
-}
-
-.separator {
-  color: var(--tech-cyan, #38bdf8);
-  font-size: 20px;
-  margin: 0 10px;
-}
-
-.social-link {
-  color: var(--slate-light, #f8fafc);
-  font-size: 14px;
-  transition: color 0.2s ease;
-}
-
-.social-link:hover {
-  color: var(--tech-cyan, #38bdf8);
-  font-size: 20px;
-}
-
-.top-bar {
-  background-color: var(--slate-dark, #0f172a);
-  color: var(--slate-light, #f8fafc);
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 500;
-  padding: 8px 24px;
-}
-
-.top-bar-container {
-  align-items: center;
+  color: #334155;
+  padding: 8px 4px;
   display: flex;
-  justify-content: space-between;
-  margin: 0 auto;
-  max-width: 1200px;
-}
-
-.top-bar-ecosystem {
   align-items: center;
-  display: flex;
-  gap: 16px;
+  gap: 6px;
+  transition: color 0.2s ease;
 }
 
-.top-bar-socials {
-  align-items: center;
-  display: flex;
-  gap: 16px;
+.nav-link-item:hover,
+.nav-link-item.active {
+  color: #059669; /* Dynamic Medical/Clinical Green active hover state */
 }
 
-/* --- 6. Responsive Breakpoints --- */
+/* CTA Sign In Button - Premium Crimson Life-Science Red Accent */
+.nav-signin-btn {
+  background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%); /* Life-science crimson gradient */
+  color: #ffffff;
+  padding: 8px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.nav-signin-btn:hover {
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.25); /* Crimson glow on element hover */
+  transform: translateY(-1px);
+}
+
+/* Mobile Toggle */
+.mobile-nav-toggle {
+  display: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.hamburger-bar {
+  width: 24px;
+  height: 2px;
+  background: #0f172a;
+  margin: 4px 0;
+}
+
 @media (max-width: 992px) {
   .mobile-nav-toggle {
     display: flex;
     flex-direction: column;
   }
-  .nav-list {
-    align-items: flex-start;
-    flex-direction: column;
-  }
+
   .nav-menu {
-    background: var(--bg-canvas, #ffffff);
     display: none;
-    left: 0;
-    padding: 20px;
     position: absolute;
     top: 100%;
+    left: 0;
     width: 100%;
+    background: #ffffff;
+    padding: 20px;
+    border-bottom: 1px solid #e2e8f0;
   }
+
   .nav-menu.open {
     display: block;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
   }
 }

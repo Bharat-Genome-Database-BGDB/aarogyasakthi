@@ -9,10 +9,10 @@ import "@styles/main.css";
  */
 export default function AboutSection() {
   return (
-    <section id="about" className="story-container">
+    <section id="about" className="container">
       
       {/* Section Header */}
-      <header className="story-hero-section">
+      <header className="hero-section">
         <span className="label-tag" style={{ marginBottom: '0.5rem' }}>Our Mandate</span>
         <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: '36px', color: 'var(--ink-primary)', fontWeight: '700' }}>
           Our Story & Translational Mission
@@ -42,7 +42,7 @@ export default function AboutSection() {
         {/* Mission & Directives Callout Grid */}
         <div className="story-callout-grid">
           
-          <div className="story-card">
+          <div className="card">
             <h3>Our Mission</h3>
             <p style={{ fontSize: '14px', lineHeight: '1.6', color: 'var(--text-muted)' }}>
               To package computational genomics and deep AI model structures into clear, accessible Standard Operating Procedures (SOPs) 
@@ -50,7 +50,7 @@ export default function AboutSection() {
             </p>
           </div>
 
-          <div className="story-card">
+          <div className="card">
             <h3>Core Directives</h3>
             <ul>
               <li>Managing safe, scalable industrial Technology Transfers.</li>

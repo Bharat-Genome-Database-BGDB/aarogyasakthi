@@ -20,9 +20,7 @@ const Header = () => {
     { label: "Home", to: "/" },
     { label: "About Initiatives", to: "/about" },       
     { label: "Translational Projects", to: "/#projects" }, 
-    { label: "FAQ", to: "/faq" },                
     { label: "Contact Us", to: "/contact" }, 
-    { label: "Privacy Policy", to: "/privacy" },      
   ];
 
   // Global foundation network mapping

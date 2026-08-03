@@ -1,11 +1,9 @@
-//src/app/faq/page.jsx
-'use client';
-import Layout from "@layout/Layout";
-import "@styles/main.css";
+"use client";
 
-export default function FaqPage() {
-  const faqData = [
-    {
+import { useState } from "react";
+
+const faqs = [
+ {
       q: "What is AarogyaSakthi’s core mandate?",
       a: "AarogyaSakthi is the translational and industry partnership vertical of the Sivasakthi Science Foundation. Our mission is to take advanced computational biology and deep AI research models from pure laboratory discovery and translate them into validated, high-impact clinical workflows, public health initiatives, and scalable software pipelines."
     },
@@ -29,27 +27,40 @@ export default function FaqPage() {
       q: "What are your validation benchmarks for Standard Operating Procedures (SOPs)?",
       a: "Every pipeline validated by AarogyaSakthi undergoes rigorous, multi-tiered stress testing against diverse datasets to guarantee reproducibility, accuracy, and absolute transparency. This 'Shift-Left' verification architecture guarantees that algorithms perform predictably and safely in real-world environments before clinical or agricultural field deployment."
     }
-  ];
+];
+
+export default function FAQPage() {
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const toggleAccordion = (idx) => {
+    setOpenIndex(openIndex === idx ? null : idx);
+  };
 
   return (
-    <Layout title="FAQ" description="Frequently Asked Questions — AarogyaSakthi Transitional & Industry Partnerships">
-      <main className="faq-page-wrapper">
-        
-        <header className="hero-identity-group">
-          <h1 className="hero-main-title">Frequently Asked Questions</h1>
-          <p className="hero-sub-tagline">Understand our translational models, collaborative integration pathways, and structural security frameworks.</p>
-        </header>
+    <main className="container">
+      
+      <header className="hero-identity-group">
+        <h1 className="hero-main-title">Frequently Asked Questions</h1>
+        <p className="hero-sub-tagline">
+          Common inquiries regarding computational access, research partnerships, open-access databases, and academic fellowships.
+        </p>
+      </header>
 
-        <section className="faq-container">
-          {faqData.map((item, idx) => (
-            <div key={idx} className="faq-block">
-              <h2 className="faq-heading">{item.q}</h2>
-              <p className="faq-answer">{item.a}</p>
+      <div className="faq-list">
+        {faqs.map((faq, idx) => (
+          <article key={idx} className="card">
+            <h3 className="faq-question">
+              <i className="fas fa-question-circle"></i>
+              {faq.q}
+            </h3>
+            <div className="faq-answer">
+              <p className="body-text">{faq.a}</p>
             </div>
-          ))}
-        </section>
+          </article>
+        ))}
+      </div>
 
-      </main>
-    </Layout>
+    </main>
   );
+
 }

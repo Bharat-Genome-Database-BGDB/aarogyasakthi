@@ -1,29 +1,28 @@
 /* src/styles/footer.css */
 
-/* --- 1. Shell --- */
 .site-footer {
-  background-color: var(--slate-dark, #0f172a); 
-  border-top: 1px solid var(--slate-border, #e2e8f0);
-  color: var(--slate-muted, #64748b);
-  font-family: var(--font-sans, 'Inter', sans-serif);
+  background-color: #0f172a; /* Maintained Deep Slate standard across all ecosystem footers */
+  color: #94a3b8; /* Crisp, clean muted gray for sub-elements and copy */
   padding: 60px 24px 40px;
+  font-family: 'Inter', sans-serif;
   width: 100%;
+  border-top: 1px solid #e2e8f0; /* Clear boundary definition divider */
 }
 
 .footer-inner {
-  display: grid;
-  gap: 40px;
-  grid-template-columns: 2fr repeat(2, 1fr);
-  margin: 0 auto;
   max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr repeat(2, 1fr);
+  gap: 40px;
 }
 
-/* Adjust grid if RBAC/member links are rendered */
+/* Adjust grid allocation if the RBAC profile column is rendered active */
 .footer-inner:has(.member-gate-links) {
   grid-template-columns: 2fr repeat(3, 1fr);
 }
 
-/* --- 2. Branding Column --- */
+/* Brand column content definitions */
 .footer-brand {
   display: flex;
   flex-direction: column;
@@ -31,27 +30,28 @@
 }
 
 .footer-brand-title {
-  color: var(--color-white, #ffffff);
-  font-family: var(--font-serif, 'Cormorant Garamond', serif);
+  display: block;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 22px;
   font-weight: 700;
+  color: #ffffff; /* Bright White Accent for strong corporate branding */
   margin: 0;
 }
 
 .footer-address {
-  color: var(--slate-muted, #64748b);
-  font-size: 14px;
   font-style: normal;
+  font-size: 14px;
   line-height: 1.6;
+  color: #cbd5e1; /* Clear white-toned slate for excellent text contrast */
 }
 
 .footer-copyright {
-  color: var(--slate-muted, #64748b);
   font-size: 12px;
+  color: #64748b; /* Soft footer sub-text gray */
   margin-top: 8px;
 }
 
-/* --- 3. Link Blocks --- */
+/* Hyperlinks and headers column blocks layout */
 .footer-links {
   display: flex;
   flex-direction: column;
@@ -59,28 +59,71 @@
 }
 
 .footer-links h4 {
-  color: var(--tech-cyan, #38bdf8);
   font-size: 11px;
   font-weight: 600;
-  letter-spacing: 0.12em;
-  margin: 0 0 4px 0;
   text-transform: uppercase;
+  color: #059669; /* Rich Medical/Clinical Green for group subtitles */
+  margin: 0 0 4px 0;
+  letter-spacing: 0.12em;
 }
 
 .footer-links a {
-  color: var(--slate-muted, #64748b);
   display: block;
+  color: #94a3b8; /* Matching calm slate layout standard links */
+  text-decoration: none;
   font-size: 14px;
-  transition: color 0.2s ease;
+  font-weight: 400;
+  transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .footer-links a:hover {
-  color: var(--slate-light, #f8fafc);
+  color: #34d399; /* Vibrant mint green glow transition on link hover */
+  transform: translateX(2px); /* Subtle glide link transition */
 }
 
-/* --- 4. Responsive --- */
+/* Responsive breakdowns for mobile views */
 @media (max-width: 768px) {
-  .footer-inner {
+  .footer-inner,
+  .footer-inner:has(.member-gate-links) {
     grid-template-columns: 1fr;
+    gap: 32px;
   }
+
+  .footer-brand {
+    border-bottom: 1px solid #334155; /* Subtle dark slate line separating rows on mobile */
+    padding-bottom: 24px;
+  }
+}
+
+/* --- Section 2: Base Attribution Layer Styles --- */
+.footer-base-bar {
+  border-top: 1px solid #1e293b; /* Sleek slate line dividing Section 1 and Section 2 */
+  margin-top: 48px;
+  padding-top: 24px;
+  width: 100%;
+}
+
+.footer-base-container {
+  background-color: #0f172a;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-copyright-statement {
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0;
+  color: #64748b;
+}
+
+.footer-copyright-statement a {
+  color: #dc2626; /* Premium Crimson Red accent line specifically for tool portal links */
+  text-decoration: none;
+  transition: color 0.15s ease;
+  font-weight: 500;
+}
+
+.footer-copyright-statement a:hover {
+  color: #ef4444; /* Brighter red hover glow */
+  text-decoration: underline;
 }

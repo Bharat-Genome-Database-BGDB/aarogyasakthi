@@ -18,40 +18,47 @@
   transition: all var(--transition-smooth, 0.2s ease);
 }
 
-/* Solid Primary Button */
+/* Solid Primary Button (Clinical Green) */
 .btn-solid,
 .form-submit-btn {
-  background: var(--lab-blue, #0284c7);
-  border: 1px solid var(--lab-blue, #0284c7);
+  background: var(--health-green, #059669);
+  border: 1px solid var(--health-green, #059669);
   color: #ffffff;
 }
 
 .btn-solid:hover,
 .form-submit-btn:hover {
-  background: var(--lab-blue-hover, #0369a1);
-  border-color: var(--lab-blue-hover, #0369a1);
+  background: var(--health-green-hover, #047857);
+  border-color: var(--health-green-hover, #047857);
   color: #ffffff;
   transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.2);
 }
 
-.btn-solid:disabled,
-.form-submit-btn:disabled {
-  background: var(--slate-muted, #64748b);
-  border-color: var(--slate-muted, #64748b);
-  cursor: not-allowed;
-  transform: none;
+/* Accent Button (Crimson Red) */
+.btn-accent {
+  background: var(--crimson-red, #dc2626);
+  border: 1px solid var(--crimson-red, #dc2626);
+  color: #ffffff;
 }
 
-/* Outline Secondary Button */
+.btn-accent:hover {
+  background: var(--crimson-red-hover, #b91c1c);
+  border-color: var(--crimson-red-hover, #b91c1c);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.2);
+}
+
+/* Outline Button */
 .btn-outline {
   background: transparent;
   border: 1px solid var(--slate-border, #e2e8f0);
-  color: var(--slate-dark, #0f172a);
+  color: var(--slate-mid, #334155);
 }
 
 .btn-outline:hover {
-  background: var(--cyan-mist, #e0f2fe);
-  border-color: var(--tech-cyan, #38bdf8);
-  color: var(--lab-blue, #0284c7);
-  transform: translateY(-2px);
+  background: var(--mint-mist, #ecfdf5);
+  border-color: var(--health-green, #059669);
+  color: var(--health-green-dark, #064e3b);
 }

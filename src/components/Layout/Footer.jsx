@@ -1,4 +1,4 @@
-//src/components/Layout/Footer.jsx
+// src/components/Layout/Footer.jsx
 'use client';
 
 import { useState, useEffect } from "react";
@@ -8,14 +8,13 @@ import "@styles/footer.css";
 
 /**
  * @component Footer
- * @description Master split two-section footer fully updated for AarogyaSakthi.
- * Coordinates core single-page anchor jumps and institutional ownership data layers.
+ * @description Master multi-column template footer styling utilizing deep plum layouts matching original FAQ specifications.
  */
 const Footer = () => {
   const [userRole, setUserRole] = useState("public");
   const [loading, setLoading] = useState(true);
 
-  // --- Auth Role-Based Access Control (RBAC) Listener Preserved ---
+  // --- Auth Role-Based Access Control (RBAC) Listener ---
   useEffect(() => {
     const fetchRole = async () => {
       try {
@@ -44,56 +43,44 @@ const Footer = () => {
     fetchRole();
   }, []);
 
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="site-footer">
-      
-      {/* SECTION 1: Top Navigation & Link Directory */}
       <div className="footer-inner">
-        
-        {/* Column 1: Core Identity Desk */}
+
+        {/* Column 1: Core Branding Block */}
         <div className="footer-brand">
           <strong className="footer-brand-title">AarogyaSakthi</strong>
           <address className="footer-address">
-            Translational and Industry Partnerships<br />
-            Clinical Integration & Technology Transfer
+            Kowdiar, Thiruvananthapuram,<br />
+            Kerala, India
           </address>
+          <p className="footer-copyright">
+            &copy; {currentYear}. Advancing Research, Training & Education.
+          </p>
         </div>
 
-        {/* Column 2: Initiatives & Legal */}
+        {/* Column 3: Engagement & Utilities */}
         <div className="footer-links">
-          <h4>About Initiatives</h4>
-          <Link href="/#about">Our Mission</Link>
+          <h4>Engage</h4>
           <Link href="/faq">Frequently Asked Questions</Link>
-          <Link href="/privacy">Privacy Policy</Link>
+          <Link href="/privacy">Privacy & Terms</Link>
+          <Link href="https://sivasakthifoundation.org/admin/dashboard" target="_blank" rel="noopener noreferrer">
+            Admin Portal
+          </Link>
         </div>
 
-        {/* Column 3: Translation & Development */}
-        <div className="footer-links">
-          <h4>Translational Hub</h4>
-          <Link href="/#projects">Pilot Programs</Link>
-          <Link href="/contact">Co-Development Form</Link>
-          <a href="mailto:research@bgdb.org">Partner Relations</a>
-        </div>
-
-        {/* Column 4: Dynamic Portal Gate (RBAC) */}
+        {/* Dynamic Column 4: Template Access Layer for RBAC states */}
         {!loading && ["admin", "superadmin", "member"].includes(userRole) && (
           <div className="footer-links member-gate-links">
             <h4>Member Area</h4>
-            <Link href="/dashboard">Partner Dashboard</Link>
+            <Link href="/dashboard">Researcher Dashboard</Link>
             <Link href="/internships">Internship Portal</Link>
           </div>
         )}
-      </div>
 
-      {/* SECTION 2: Dedicated Base Layer Metadata Attribution Bar */}
-      <div className="footer-base-bar">
-        <div className="footer-base-container">
-          <p className="footer-copyright-statement">
-            &copy; 2026 AarogyaSakthi, All rights reserved. An SSF Initiative. Managed by <a href="https://bgdb.org" target="_blank" rel="noopener noreferrer">bgdb.org</a>
-          </p>
-        </div>
       </div>
-
     </footer>
   );
 };

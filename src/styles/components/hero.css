@@ -2,7 +2,7 @@
 
 .hero-section,
 .page-hero {
-  background: var(--bg-canvas, #ffffff);
+  background: linear-gradient(180deg, var(--mint-mist, #ecfdf5) 0%, #ffffff 100%);
   border-bottom: 1px solid var(--slate-border, #e2e8f0);
   padding: 70px 0 50px;
   text-align: center;
@@ -17,6 +17,10 @@
   line-height: 1.25;
   margin: 0 auto 20px;
   max-width: 900px;
+}
+
+.hero-title span {
+  color: var(--health-green, #059669);
 }
 
 .hero-subtitle {
@@ -34,10 +38,4 @@
   gap: 16px;
   justify-content: center;
   margin-top: 24px;
-}
-
-@media (max-width: 576px) {
-  .hero-cta-group {
-    flex-direction: column;
-  }
 }
