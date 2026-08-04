@@ -51,34 +51,27 @@ const Footer = () => {
 
         {/* Column 1: Core Branding Block */}
         <div className="footer-brand">
+          <div>
           <strong className="footer-brand-title">AarogyaSakthi</strong>
+          <br />
+          <span className="footer-subtitle">Translational & Industry Partnerships</span>
+          </div>
+        
           <address className="footer-address">
             Kowdiar, Thiruvananthapuram,<br />
             Kerala, India
           </address>
           <p className="footer-copyright">
-            &copy; {currentYear}. Advancing Research, Training & Education.
+            © 2026 ArogyaSakthi • Sivasakthi Science Foundation
           </p>
         </div>
 
-        {/* Column 3: Engagement & Utilities */}
+        {/* Column 2: Engagement & Utilities */}
         <div className="footer-links">
           <h4>Engage</h4>
           <Link href="/faq">Frequently Asked Questions</Link>
           <Link href="/privacy">Privacy & Terms</Link>
-          <Link href="https://sivasakthifoundation.org/admin/dashboard" target="_blank" rel="noopener noreferrer">
-            Admin Portal
-          </Link>
         </div>
-
-        {/* Dynamic Column 4: Template Access Layer for RBAC states */}
-        {!loading && ["admin", "superadmin", "member"].includes(userRole) && (
-          <div className="footer-links member-gate-links">
-            <h4>Member Area</h4>
-            <Link href="/dashboard">Researcher Dashboard</Link>
-            <Link href="/internships">Internship Portal</Link>
-          </div>
-        )}
 
       </div>
     </footer>

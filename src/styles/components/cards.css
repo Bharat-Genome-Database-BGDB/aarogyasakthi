@@ -2,28 +2,28 @@
 
 /* ─── 1. Core Card Component ─── */
 .card {
-  background-color: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-left: 2px solid var(--card-border-accent);
-  border-radius: var(--border-radius-bento, 12px);
-  box-shadow: var(--card-shadow);
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-left: 4px solid #059669;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
   display: flex;
   flex-direction: column;
   height: 100%;
   padding: 32px;
-  transition: all var(--transition-smooth, 0.2s ease);
+  transition: all 0.2s ease;
 }
 
 .card:hover {
-  border-color: var(--card-border-accent);
+  border-color: #059669;
   border-left-width: 4px;
-  box-shadow: var(--card-shadow-hover);
+  box-shadow: 0 8px 24px rgba(5, 150, 105, 0.12);
   transform: translateY(-4px);
 }
 
 /* Card Typography Helpers */
 .card-subtitle {
-  color: var(--brand-accent);
+  color: #dc2626;
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -32,14 +32,14 @@
 }
 
 .card-title {
-  color: var(--ink-primary);
-  font-family: var(--font-serif);
+  color: #0f172a;
+  font-family: 'Cormorant Garamond', Georgia, serif;
   font-size: 1.5rem;
   margin-bottom: 0.75rem;
 }
 
 .card-body {
-  color: var(--text-main);
+  color: #334155;
   flex-grow: 1;
   font-size: 0.95rem;
   line-height: 1.7;
@@ -47,9 +47,9 @@
 
 /* ─── 2. Modifiers & Sub-Elements ─── */
 .badge {
-  background-color: var(--brand-surface-subtle);
+  background-color: #ecfdf5;
   border-radius: 20px;
-  color: var(--brand-accent);
+  color: #dc2626;
   display: inline-block;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -66,9 +66,9 @@
 .card-icon,
 .icon-box {
   align-items: center;
-  background-color: var(--brand-surface-subtle);
+  background-color: #ecfdf5;
   border-radius: 12px;
-  color: var(--brand-primary);
+  color: #059669;
   display: flex;
   font-size: 20px;
   height: 50px;
@@ -88,7 +88,7 @@
 
 .card-list li {
   align-items: center;
-  color: var(--text-main);
+  color: #334155;
   display: flex;
   font-size: 0.95rem;
   gap: 8px;
@@ -104,26 +104,26 @@
 }
 
 .contact-sidebar {
-  background-color: var(--brand-surface-subtle);
+  background-color: #ecfdf5;
   border: none;
 }
 
 /* FAQ Card Modifier */
 .faq-card {
-  border-left: 4px solid var(--card-border-accent);
+  border-left: 4px solid #059669;
   cursor: pointer;
 }
 
 .faq-card:hover {
-  box-shadow: var(--card-shadow-hover);
+  box-shadow: 0 8px 24px rgba(5, 150, 105, 0.12);
   transform: translateY(-2px);
 }
 
 /* Partners Logo Container */
 .card-logo-wrap {
   align-items: center;
-  background-color: var(--bg-section);
-  border: 1px solid var(--bg-border);
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
   border-radius: 12px;
   display: flex;
   height: 120px;
@@ -148,8 +148,8 @@
 }
 
 .registry-item {
-  background-color: var(--brand-surface-subtle);
-  border-left: 3px solid var(--brand-primary);
+  background-color: #ecfdf5;
+  border-left: 3px solid #059669;
   border-radius: 8px;
   padding: 16px 20px;
 }
@@ -157,14 +157,14 @@
 /* Leadership & Trustee Avatar Initials */
 .initials-box {
   align-items: center;
-  background-color: var(--brand-surface-subtle);
+  background-color: #ecfdf5;
   border: 3px solid #ffffff;
   border-radius: 50%;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  color: var(--brand-primary);
+  color: #059669;
   display: flex;
   flex-shrink: 0;
-  font-family: var(--font-serif);
+  font-family: 'Cormorant Garamond', Georgia, serif;
   font-size: 32px;
   font-weight: 700;
   height: 90px;
@@ -174,17 +174,17 @@
 
 /* Compound Featured Containers */
 .card-section-featured {
-  background-color: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: var(--border-radius-bento, 16px);
-  border-top: 4px solid var(--card-border-accent);
-  box-shadow: var(--card-shadow);
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  border-top: 4px solid #059669;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
   margin-bottom: 32px;
   padding: 48px;
 }
 
 .card-info-box {
-  background-color: var(--brand-surface-subtle);
+  background-color: #ecfdf5;
   border: none;
   border-radius: 12px;
   padding: 32px;

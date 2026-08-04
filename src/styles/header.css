@@ -2,9 +2,9 @@
 
 /* ─── 1. Global Shell ─── */
 .site-header {
-  background-color: var(--header-bg);
+  background-color: var(--header-bg, #ffffff);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  font-family: var(--font-sans);
+  font-family: var(--font-sans, sans-serif);
   position: relative;
   width: 100%;
   z-index: 1000;
@@ -12,7 +12,7 @@
 
 /* ─── 2. Top Bar Ecosystem ─── */
 .top-bar {
-  background-color: var(--brand-primary);
+  background-color: var(--brand-primary, #059669);
   color: #ffffff;
   font-size: 13px;
   font-weight: 500;
@@ -24,7 +24,7 @@
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: var(--max-content-width, 1000px);
 }
 
 .top-bar-ecosystem,
@@ -63,7 +63,7 @@
 }
 
 .separator {
-  color: var(--brand-accent);
+  color: var(--brand-accent, #dc2626);
   font-size: 16px;
   margin: 0 8px;
   opacity: 0.6;
@@ -71,8 +71,8 @@
 
 /* ─── 3. Branding & Main Navigation ─── */
 .main-nav-container {
-  background-color: var(--header-bg);
-  border-bottom: 1px solid var(--header-border);
+  background-color: var(--header-bg, #ffffff);
+  border-bottom: 1px solid var(--header-border, #e2e8f0);
   padding: 12px 24px;
 }
 
@@ -81,7 +81,7 @@
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: var(--max-content-width, 1000px);
 }
 
 .header__brand {
@@ -102,15 +102,15 @@
 }
 
 .brand-title {
-  color: var(--text-heading);
-  font-family: var(--font-serif);
+  color: var(--text-heading, #0f172a);
+  font-family: var(--font-serif, serif);
   font-size: 22px;
   font-weight: 700;
   margin: 0;
 }
 
 .brand-tagline {
-  color: var(--text-muted);
+  color: var(--text-muted, #64748b);
   font-size: 11px;
   font-weight: 500;
   letter-spacing: 0.5px;
@@ -132,7 +132,7 @@
 
 .nav-link-item {
   align-items: center;
-  color: var(--text-heading);
+  color: var(--text-heading, #0f172a);
   display: flex;
   font-size: 15px;
   font-weight: 500;
@@ -144,13 +144,13 @@
 
 .nav-link-item:hover,
 .nav-link-item.active {
-  color: var(--brand-accent);
+  color: var(--brand-accent, #dc2626);
 }
 
 /* ─── 4. Dropdowns ─── */
 .dropdown-menu {
-  background-color: var(--header-bg);
-  border: 1px solid var(--header-border);
+  background-color: var(--header-bg, #ffffff);
+  border: 1px solid var(--header-border, #e2e8f0);
   border-radius: 6px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   display: none;
@@ -168,7 +168,7 @@
 }
 
 .dropdown-link-item {
-  color: var(--text-main);
+  color: var(--text-main, #334155);
   display: block;
   font-size: 14px;
   padding: 10px 20px;
@@ -177,8 +177,8 @@
 }
 
 .dropdown-link-item:hover {
-  background-color: var(--brand-surface-subtle);
-  color: var(--brand-accent);
+  background-color: var(--brand-surface-subtle, #ecfdf5);
+  color: var(--brand-accent, #dc2626);
 }
 
 /* ─── 5. Mobile Controls ─── */
@@ -190,7 +190,7 @@
 }
 
 .hamburger-bar {
-  background-color: var(--text-heading);
+  background-color: var(--text-heading, #0f172a);
   height: 2px;
   margin: 4px 0;
   width: 24px;
@@ -204,8 +204,8 @@
   }
 
   .nav-menu {
-    background-color: var(--header-bg);
-    border-bottom: 1px solid var(--header-border);
+    background-color: var(--header-bg, #ffffff);
+    border-bottom: 1px solid var(--header-border, #e2e8f0);
     display: none;
     left: 0;
     padding: 20px;

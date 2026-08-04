@@ -17,14 +17,14 @@
   padding: 12px 24px;
   text-align: center;
   text-decoration: none;
-  transition: all var(--transition-smooth, 0.2s ease);
+  transition: all 0.2s ease;
 }
 
 .btn-accent:focus-visible,
 .btn-outline:focus-visible,
 .btn-solid:focus-visible,
 .submit-btn:focus-visible {
-  outline: 2px solid var(--form-focus-ring);
+  outline: 2px solid #059669;
   outline-offset: 2px;
 }
 
@@ -37,30 +37,30 @@
 /* ─── 2. Primary Solid Button ─── */
 .btn-solid,
 .submit-btn {
-  background-color: var(--btn-bg-primary);
-  border: 1px solid var(--btn-bg-primary);
-  color: var(--btn-text-primary, #ffffff);
+  background-color: #059669;
+  border: 1px solid #059669;
+  color: #ffffff;
 }
 
 .btn-solid:hover,
 .submit-btn:hover {
-  background-color: var(--btn-bg-primary-hover);
-  border-color: var(--btn-bg-primary-hover);
+  background-color: #047857;
+  border-color: #047857;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-  color: var(--btn-text-primary, #ffffff);
+  color: #ffffff;
   transform: translateY(-2px);
 }
 
 /* ─── 3. Accent CTA Button ─── */
 .btn-accent {
-  background-color: var(--brand-accent);
-  border: 1px solid var(--brand-accent);
+  background-color: #dc2626;
+  border: 1px solid #dc2626;
   color: #ffffff;
 }
 
 .btn-accent:hover {
-  background-color: var(--brand-accent-hover);
-  border-color: var(--brand-accent-hover);
+  background-color: #b91c1c;
+  border-color: #b91c1c;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   color: #ffffff;
   transform: translateY(-2px);
@@ -69,14 +69,14 @@
 /* ─── 4. Secondary Outline Button ─── */
 .btn-outline {
   background-color: transparent;
-  border: 1px solid var(--btn-border-secondary, var(--bg-border));
-  color: var(--btn-text-secondary, var(--ink-secondary));
+  border: 1px solid #e2e8f0;
+  color: #334155;
 }
 
 .btn-outline:hover {
-  background-color: var(--btn-bg-secondary-hover);
-  border-color: var(--brand-primary);
-  color: var(--brand-primary);
+  background-color: #ecfdf5;
+  border-color: #059669;
+  color: #059669;
   transform: translateY(-2px);
 }
 
@@ -85,10 +85,10 @@
 .btn-outline:disabled,
 .btn-solid:disabled,
 .submit-btn:disabled {
-  background-color: var(--bg-border);
-  border-color: var(--bg-border);
+  background-color: #e2e8f0;
+  border-color: #e2e8f0;
   box-shadow: none;
-  color: var(--text-muted);
+  color: #64748b;
   cursor: not-allowed;
   opacity: 0.65;
   transform: none;

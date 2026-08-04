@@ -9,7 +9,7 @@ export default function HomePage() {
       title="AarogyaSakthi | Advancing Clinical Research & Scalable Health Tech" 
       description="Empowering public health systems and life-science innovations through precision genomics, ethical clinical technology, and accessible care frameworks."
     >
-      <div className="home-container">
+      <div className="container">
         {/* --- HERO SECTION --- */}
         <section className="hero-section">
           <div className="content-wrapper">

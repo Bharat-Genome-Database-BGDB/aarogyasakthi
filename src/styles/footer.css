@@ -2,20 +2,22 @@
 
 /* ─── 1. Shell ─── */
 .site-footer {
-  background-color: var(--footer-bg);
-  border-top: 1px solid var(--bg-border);
-  color: var(--footer-text);
-  font-family: var(--font-sans);
+  background-color: var(--footer-bg, #0f172a);
+  border-top: 1px solid var(--bg-border, #e2e8f0);
+  color: var(--footer-text, #94a3b8);
+  font-family: var(--font-sans, sans-serif);
   padding: 60px 24px 40px;
   width: 100%;
 }
+
+
 
 .footer-inner {
   display: grid;
   gap: 40px;
   grid-template-columns: 2fr repeat(2, 1fr);
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: var(--max-content-width, 1000px);
 }
 
 /* Adjust grid if RBAC/member links are rendered */
@@ -32,22 +34,30 @@
 
 .footer-brand-title {
   color: #ffffff;
-  font-family: var(--font-serif);
+  font-family: var(--font-serif, serif);
   font-size: 22px;
   font-weight: 700;
   margin: 0;
 }
 
+.footer-subtitle{
+  color: var(--footer-text, #94a3b8);
+  font-size: 12px;
+  font-style: normal;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
 .footer-address {
-  color: var(--footer-text);
-  font-size: 14px;
+  color: var(--footer-text, #94a3b8);
+  font-size: 12px;
   font-style: normal;
   line-height: 1.6;
   opacity: 0.85;
 }
 
 .footer-copyright {
-  color: var(--footer-text);
+  color: var(--footer-text, #94a3b8);
   font-size: 12px;
   margin-top: 8px;
   opacity: 0.6;
@@ -61,7 +71,7 @@
 }
 
 .footer-links h4 {
-  color: var(--brand-accent);
+  color: var(--brand-accent, #dc2626);
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.12em;
@@ -70,15 +80,16 @@
 }
 
 .footer-links a {
-  color: var(--footer-text);
+  color: var(--footer-text, #94a3b8);
   display: block;
   font-size: 14px;
   opacity: 0.85;
+  text-decoration: none;
   transition: all var(--transition-smooth, 0.2s ease);
 }
 
 .footer-links a:hover {
-  color: #ffffff;
+  color: var(--brand-accent, #dc2626);
   opacity: 1;
 }
 
